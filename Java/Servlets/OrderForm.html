@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Order Form</title>
+</head>
+<body>
+	<h1>XYZ Computers: Order Form</h1>
+	<form action="OrderFormServlet" method="post">
+		<table>
+			<tr>
+				<td>Description:</td>
+				<td><input type="text" name="description"></td>
+			</tr>
+			<tr>
+				<td>Code:</td>
+				<td><input type="text" name="code"><br></td>
+			</tr>
+			<tr>
+				<td>Quantity:</td>
+				<td><input type="text" name="quantity"></td>
+			</tr>
+			
+			<tr><td>&nbsp;</td></tr>
+			<tr>
+				<td>Delivery:</td>
+			</tr>
+			<tr>				
+				<td><input type="radio" id="same" name="delivery" value="Same Day">
+				<label for="same">Same Day</label></td>
+			</tr>
+			<tr>
+				<td><input type="radio" id="exp" name="delivery" value="Express">
+				<label for="exp">Express</label></td>
+			</tr>
+			<tr>
+				<td><input type="radio" id="stand" name="delivery" value="Standard">
+				<label for="stand">Standard</label></td>
+			</tr>
+			<tr>
+				<td>Customer ID:</td>
+				<td><input type="password" name="customer"></td>
+			</tr>
+			<tr><td>&nbsp;</td></tr>
+			
+		</table>
+		
+		<div>
+			<input type="submit" value="Place Order">
+			<input type="button" value="Cancel">
+		</div>
+
+	</form>
+</body>
+</html>

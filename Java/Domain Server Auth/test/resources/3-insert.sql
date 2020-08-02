@@ -1,0 +1,11 @@
+--INSERT INTO `user` (`user_role`, `user_email`, `user_name`, `user_password`, `user_primary_details`) VALUES
+--        (1, 'test@test.com', 'user1', '$2a$12$QJZ/nqqylIY2wYTvbNCpFO8HqLMaXemqpCWE.XEmqqU/eMJzqAwzO', 1),
+--        (2, 'test@test.com', 'user2', '$2a$12$QJZ/nqqylIY2wYTvbNCpFO8HqLMaXemqpCWE.XEmqqU/eMJzqAwzO', 2),
+--        (3, 'test@test.com', 'user3', '$2a$12$QJZ/nqqylIY2wYTvbNCpFO8HqLMaXemqpCWE.XEmqqU/eMJzqAwzO', 3),
+--        (4, 'test@test.com', 'user4', '$2a$12$QJZ/nqqylIY2wYTvbNCpFO8HqLMaXemqpCWE.XEmqqU/eMJzqAwzO', 4);
+--
+--INSERT INTO `user_details` (`user_id`, `first_name`, `last_name`, `company`, `addr_1`, `addr_2`, `town_city`, `county_state`, `country`, `postcode`, `landline`, `mobile`) VALUES 
+--        (1, 'Test', 'User', 'Test', '123 Test Lane', 'Test Line', 'Test Town', 'Test', 'Test', 'Test', "0123443210", NULL),
+--        (2, 'Test', 'User', NULL, '123 Test Lane', 'Test Line', 'Test Town', 'Test', 'Test', 'Test', "0123443210", "01234432010"),
+--        (3, 'Test', 'User', NULL, '123 Test Lane', 'Test Line', 'Test Town', 'Test', 'Test', 'Test', "0123443210", NULL),
+--        (4, 'Test', 'User', 'Test', '123 Test Lane', 'Test Line', 'Test Town', 'Test', 'Test', 'Test', "0123443210", "0123443210");

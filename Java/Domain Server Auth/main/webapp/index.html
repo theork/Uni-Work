@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Domain Check</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script text="text/javascript" src="js/checkUser.js">
+
+	</script>
+</head>
+
+<body>
+
+    <div class="taskbar">
+        <ul>
+            <li><a href="">Homepage</a></li>
+        </ul>
+        <ul>
+            <li><a href="">Domains</a></li>
+        </ul>
+        <ul>
+            <li><a href="">Email Hosting</a></li>
+        </ul>
+        <ul>
+            <li><a href="">Resellers</a></li>
+        </ul>
+        <ul>
+            <li><a href="">VPS/VDS & Cloud</a></li>
+        </ul>
+        <ul>
+            <li><a href="">Dedicated</a></li>
+        </ul>
+        <ul>
+            <li><a href="">Websites</a></li>
+        </ul>
+        <ul>
+            <li><a href="">SSL</a></li>
+        </ul>
+    </div>
+    
+    <div id="search_box">
+        <ul>
+            <li>
+                <input type="text" name='domain search' placeholder="Enter Domain"/>
+            </li>
+            <li>
+                <div class = "button">
+                    <p>Search Domains</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+	<form name="form1" class="box">
+		<h2>Login</h2>
+		<div>
+			<label for="u_name">Username</label>
+			<input type="text" name='username' />
+
+			<span id="error_username" style="display: none"></span>
+		</div>
+
+		<div>
+			<label for="pass">Password</label>
+			<input type="password" name="password" required/>
+			<!-- <span id="error_password" style="display: none"></span> -->
+
+		</div>
+
+        <a href="">
+            <p>Forgot Password?</p>
+        </a>
+        
+		<input type="submit" name="submit" value="Sign In" onclick="return alphanumeric(document.form1.username)" />
+        
+        <p>New User</p>  
+        <div class = "button">
+            <a href="signup.html" id="sign">
+                <p>Sign Up!</p>
+            </a>
+        </div>
+        
+	</form>
+	<a href="signup.html"><h2>Need an account? Sign up</h2></a>
+	
+	<script>
+		function clicker() {
+			var token;
+			const username = "test_user";
+			const password = "password";
+			var authString = username + ":" + password;
+			var encodedAuth = btoa(authString);
+			var authHeader = "Basic " + encodedAuth;
+			fetch("/api/login", {
+				method: "POST",
+				redirect: 'follow',
+				headers: {
+					authorization: authHeader
+				}
+			})
+			.then(res => {
+				return res.json();
+			})
+			.then(data => {
+				token = data.token;
+				var node = document.createElement("div");
+				var textnode = document.createTextNode(token);
+				node.appendChild(textnode);
+				document.querySelector("body").appendChild(node); 
+			}) 
+			.catch(error => {
+				console.log("Whoops!)");
+			});
+				
+		}
+	</script>
+</body>
+</html>
