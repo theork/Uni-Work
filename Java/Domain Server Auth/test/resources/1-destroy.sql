@@ -1,1 +1,0 @@
-DROP TABLE IF EXISTS user, userdetails, domain, legaltype, securityquestion ;
